@@ -1,0 +1,576 @@
+  /*--------------------GENERAL--------------------*/
+  *{
+    margin: 0;
+  }
+  
+  /*Body*/
+  body{
+    font-family: Verdana, Arial, sans-serif;
+  }
+
+  /*Header*/
+  header {
+    background-color: #151515;
+    color: #fff;
+  }
+
+  /*Header logo*/
+  header img{
+    height: 75px;
+  }
+
+  /*Main*/
+  main{
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.6;
+  }
+
+  /*Center main content of each page*/
+  .main-content{
+    margin: 0 auto;
+    width: 85%;
+    padding: 3% 0;
+  }
+
+  /*Footer*/
+  footer{
+    background-color: #151515;
+    color:#eaeaea;
+    text-align: center;
+    padding: 20px;
+  }
+  footer a{
+    color: #ffffff;
+  }
+
+  /*Navigation*/
+  nav{
+    background-color: #597A5E;
+    font-size: 1em;
+  }
+  nav ul {
+    list-style-type: none;
+    padding: 0.5em;
+    display: flex; 
+    flex-direction: column; 
+    flex-wrap: nowrap; 
+    text-align: center;
+  }
+  nav ul li {
+    padding: 0.4em;
+  }
+  nav a {
+    text-decoration: none;
+    color: #b8cbbb;
+  }
+  nav a:link { 
+    color: #b8cbbb; 
+  }
+  nav a:hover { 
+    color: #597A5E; 
+  }
+  nav #active-page a{ 
+    font-weight: bold;
+    color: #ffffff; 
+  }
+
+  /*Page Title*/
+  .page-title{
+    color: #DC5843;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: lighter;
+  }
+
+  /* Grid Areas */
+  header { grid-area: h; }
+  nav    { grid-area: n; }
+  main   { grid-area: m; }
+  footer { grid-area: f; }
+  #wrapper {  
+    display: grid;
+    grid-template: 
+    "h"
+    "n"
+    "m"
+    "f" ; 
+  }
+  /*-------------------------------------------------*/
+
+
+
+  /*--------------------HOME PAGE--------------------*/
+  /*Banner image*/
+  #home-banner{
+    width: 100%;
+    height: auto;
+  }
+
+  /*Jazz Fanzz span*/
+  #jazzfanzz{
+    color: #DC5843;
+    font-weight: bold;
+    font-size: large;
+    text-transform: uppercase;
+  }
+
+  /* Content links to main content pages */
+  .content-links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+  .content-links div{
+    flex: auto;
+    min-width: 220px;
+    max-width: 400px;
+    height: 200px;
+    background-color: #b8cbbb;
+    margin: 20px auto;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.5em;
+  }
+  .content-links div p {
+    margin: 1em; 
+  }
+  .content-links div a{
+    background-color: #597A5E;
+    color: #fff;
+    padding: 10px;
+    margin: 0em 1em 1em 1em;
+    font-size: large;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  /*Sub Titles*/
+  .sub-title{
+    margin-bottom: 0.5em;
+  }
+  
+  /*CSS Image Gallery*/
+  .instrument {
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 3em;
+  }
+  .gallery{
+    position: relative;
+    display: inline-block;
+  }
+  .gallery img {
+    width: 100%;
+    height: auto;
+  }
+  .instrumentdesc {
+    text-align: center;
+    font-size: 1.1em;
+  }
+
+  /*Overlays on images in gallery*/
+  .doublebass-overlay, .trumpet-overlay, .saxophone-overlay, .piano-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+  }
+  .doublebass-overlay{
+    background-color: #FFD7D0;
+    color: #DC5843;
+  }
+  .trumpet-overlay{
+    background-color: #E0EDE2;
+    color: #597A5E;
+  }
+  .saxophone-overlay{
+    background-color: #FFE2BF;
+    color: #ffa93f;
+  }
+  .piano-overlay{
+    background-color: #E0EDFF;
+    color: #225eb3;
+  }
+  div.gallery:hover .doublebass-overlay, div.gallery:hover .trumpet-overlay, div.gallery:hover .saxophone-overlay, div.gallery:hover .piano-overlay {
+    opacity: 1;
+  }
+  
+  /*Form to sign up to newsletter*/
+  form{
+    background-color: #eaeaea;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3em;
+  }
+  form p span{
+    font-size: small;
+    font-style: italic;
+  }
+  label{
+    font-weight: bold;
+  }
+  input{
+    margin-bottom: 1em;
+    margin-top: 0.5em;
+    padding: 0.5em;
+  }
+  input[type="submit"] {
+    padding: 0.5em 0em;
+    font-size: large;
+    font-weight: bold;
+    background-color: #151515;
+    color: #ffffff;
+    border-radius: 5px;
+  }
+  /*----------------------------------------------------*/
+
+
+
+  /*--------------------ABOUT PAGE--------------------*/
+  /*Intro text*/
+  #about-intro{
+    text-align: justify;
+  }
+
+  /*Description list*/
+  dl dt{
+    margin-bottom: 0.5em;
+    font-size: 1.17em;
+    font-weight: bold;
+  }
+  dl dd{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    margin-bottom: 2em;
+  }
+
+  /*Images within text*/
+  #img1920{
+    width: 100%;
+    height: auto;
+    margin: 0.5em auto;
+  }
+  #img1950{
+    width: 100%;
+    margin: 0.5em auto;
+  }
+  /*----------------------------------------------------*/
+
+
+
+  /*--------------------ARTISTS PAGE--------------------*/
+  /*div containing content about artist*/
+  .artist-info{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    margin-bottom: 2em;
+  }
+
+  /*image of artist*/
+  .artist-img{
+    width: 100%;
+    height: auto;
+    margin: 0.5em auto;
+  }
+
+  /*Button linking to external website*/
+  .artist-info a{
+    background-color: #151515;
+    color: #ffffff;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    float: right;
+    border-radius: 5px;
+    margin-top: 1em;
+  }
+
+  /*Spotify logo within button*/
+  .artist-info a img{
+    width: 25px;
+    height: auto;
+    vertical-align: middle;
+  }
+
+  /*Youtube video*/
+  .artist-video{
+    text-align: center;
+    margin-top: 1em;
+  }
+  /*----------------------------------------------------*/
+
+
+
+  /*--------------------EVENTS PAGE--------------------*/
+  /*Table styling*/
+  table{
+    width: 100%;
+    border: 2px solid #151515;
+    border-collapse: collapse;
+    text-align: center;
+    margin-bottom: 2em;
+  }
+  thead{
+    background-color: #b8cbbb;
+    color: #ffffff;
+  }
+  thead th{
+    border-bottom: 2px solid #151515;
+    padding: 10px 0px;
+  }
+  tbody td{
+    padding: 40px 5px;
+  }
+  tfoot{
+    background-color: #151515;
+    color: #ffffff;
+  }
+  tfoot td{
+    padding: 10px 5px;
+  }
+  tr:nth-of-type(even) { 
+    background-color: #eaeaea; 
+  }
+  #date, #tickets{
+    width: 20%;
+  }
+  #details{
+    width: 60%;
+    text-align: start;
+  }
+  .date h3{
+    color: #597A5E;
+    font-weight: normal;
+  }
+  .date h4{
+    color: #597A5E;
+    font-weight: normal;
+  }
+  .details{
+    text-align: start;
+    font-weight: bold;
+  }
+  .details small{
+    font-weight: normal;
+  }
+  .tickets img{
+    width: 30px;
+    height: auto;
+    background-color: #151515;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  /*----------------------------------------------------*/
+
+
+
+
+  @media (min-width: 600px) {
+    /*Grid Layout*/
+    #wrapper { 
+      grid-template:
+      " h "
+      " n "
+      " m "
+      " f "; 
+    }
+
+
+    /*----------GENERAL----------*/
+    header {
+      padding: 10px;
+    }
+
+    nav{
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+    nav ul { 
+      display: flex; 
+      flex-direction: row; 
+      flex-wrap: nowrap; 
+      justify-content: flex-end;
+    }
+    nav ul li { 
+      margin-right: 1.5em;
+    }
+
+
+    /*-----------HOME-----------*/
+    .content-links div{
+      min-width: 500px;
+      height: 150px;
+    }
+
+    .instrument {
+      width: 50%;
+      margin: 0.5em 0;
+    }
+
+    form{
+      display: block;
+      overflow: hidden;
+    }
+
+    label{
+      float: left;
+      display: block;
+      clear: left;
+      width: 200px;
+      text-align: right;
+      padding-right: 1em;
+    }
+
+    input{
+      display: block;
+      margin-top: 0em;
+    }
+
+    input[type="submit"] {
+      float: right;
+      padding: 0.5em 2em;
+    }
+
+
+    /*-----------ABOUT-----------*/
+    dl dd{
+      display: block;
+      overflow: auto;
+    }
+
+    #img1920{
+      float:right;
+      margin: 0 1em 1em 1em;
+      width: 30%;
+      transition: width 2s;
+    }
+
+    #img1920:hover{
+      width: 50%;
+    }
+
+    #img1950{
+      float:left;
+      margin: 0 1em 1em 1em;
+      width: 40%;
+      transition: width 2s;
+    }
+
+    #img1950:hover{
+      width: 50%;
+    }
+
+
+    /*----------ARTISTS----------*/
+    .artist-info{
+      display: block;
+      overflow: auto;
+    }
+
+    .artist-img{
+      float: right;
+      margin: 0 1em 1em 1em;
+      width: 40%;
+      max-width: 345px;
+    }
+
+    .artist-video iframe{
+      width: 500px;
+      height: 300px;
+    }
+  }
+  
+
+
+
+
+  @media (min-width: 1280px) {
+    /*Grid layout*/
+    #wrapper { 
+      grid-template: 
+              " h   h"
+              " n   m"
+              " f   f" 
+              / 15% 85%; 
+    }
+
+
+    /*----------GENERAL----------*/
+    header img {
+      height: 100px;
+    }
+
+    nav{
+      font-size: 1.5em;
+      position: static;
+    }
+    nav ul { 
+      display: flex; 
+      flex-direction: column; 
+      flex-wrap: nowrap; 
+      padding: 1em;
+    }
+
+
+    /*-----------HOME-----------*/
+    .content-links{
+      flex-direction: row;
+
+    }
+
+    .content-links div{
+      min-width: 50px;
+      max-width: 250px;
+      height: 225px;
+    }
+
+    .instrument {
+      width: 25%;
+      margin-bottom: 3em;
+    }
+
+
+    /*-----------ABOUT-----------*/
+    #img1920{
+      width: 30%;
+      transition: width 2s;
+    }
+
+    #img1920:hover{
+      width: 50%;
+    }
+
+    #img1950{
+      width: 40%;
+      transition: width 2s;
+    }
+
+    #img1950:hover{
+      width: 50%;
+    }
+
+
+    /*----------ARTISTS----------*/
+    .artist-video iframe{
+      width: 700px;
+      height: 400px;
+    }
+  }

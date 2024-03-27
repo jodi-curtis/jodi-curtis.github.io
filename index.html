@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>	
+  <title>Jazz Fanzz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jazz Fanzz, a place to learn about the histoy of Jazz, top Jazz artists and find Jazz events near you.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+  <div id="wrapper">
+    <!--Header-->
+    <header>
+      <img src="images/logo.png" alt="Jazz Fanzz Logo">
+    </header>
+
+    <!--Navigation-->
+    <nav>
+      <ul>
+        <li id="active-page"><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="artists.html">Artists</a></li>
+        <li><a href="events.html">Events</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <!--Banner Image which spans accross whole page-->
+      <img id="home-banner" src="images/banner.png" alt="Jazz Fanzz Banner Image">
+      <!--Main Content of page-->
+      <div class="main-content">
+        <!--Welcome Message-->
+        <p>Welcome to <span id="jazzfanzz">Jazz Fanzz</span>! Whether you're a Jazz enthusiast or just discovering jazz, this is the perfect place to explore. Dive into the mesmerizing world of jazz music.</p>
+
+
+        <!--Links to each of the content pages-->
+        <div class="content-links">
+          <div>
+            <p>Learn about the history of Jazz music and the eras throughout the years</p> 
+            <a href="about.html">About</a>
+          </div>
+          <div>
+            <p>Learn about some of the top Jazz artist of all time and listen to their music</p> 
+            <a href="artists.html">Artists</a>
+          </div>
+          <div>
+            <p>See upcoming Jazz Events and book your tickets</p> 
+            <a href="events.html">Events</a>
+          </div>
+        </div>
+
+        <!--Top Jazz Instruments displayed in a CSS Image Gallery
+        which when hovered over each will show some descriptive text -->
+        <h3 class="sub-title">Top Jazz Instruments</h3>
+        <div class="instrument">
+          <div class="gallery">
+              <img src="images/piano.png" alt="Piano" width="400" height="400">
+              <div class="piano-overlay">
+                <div class="text">Piano has always played a huge part in jazz music. It's versatility has made it a hot favorite of many musicians across the globe, and has directly influenced the course of jazz history.</div>
+              </div>
+            <div class="instrumentdesc">Piano</div>
+          </div>
+        </div>
+        <div class="instrument">
+          <div class="gallery">
+              <img src="images/saxophone.png" alt="Saxophone" width="400" height="400">
+              <div class="saxophone-overlay">
+                <div class="text">The saxophone comes in 6 different sizes, each emitting a slightly different sound. Typically, you’re most likely to encounter a tenor, alto, baritone, or a soprano saxophone in most jazz bands.</div>
+              </div>
+            <div class="instrumentdesc">Saxophone</div>
+          </div>
+        </div>
+        <div class="instrument">
+          <div class="gallery">
+              <img src="images/trumpet.png" alt="Trumpet" width="400" height="400">
+              <div class="trumpet-overlay">
+                <div class="text">Like the saxophone, the trumpet is a long instrument made of brass, In most jazz bands, the trumpet is there to add that signature, high-pitched sound.</div>
+              </div>
+            <div class="instrumentdesc">Trumpet</div>
+          </div>
+        </div>
+        <div class="instrument">
+          <div class="gallery">
+              <img src="images/doublebass.png" alt="Double Bass" width="400" height="400">
+              <div class="doublebass-overlay">
+                <div class="text">The double bass is by far the lowest pitched instrument in the history of jazz orchestras. Typically, it is used in most modern jazz ensembles to lend the song a certain added weight that none of the other instruments can quite muster.</div>
+              </div>
+            <div class="instrumentdesc">Double Bass</div>
+          </div>
+        </div>
+
+        <!--Form for signing up to newsletter-->
+        <form>
+          <h3 class="sub-title">Sign Up!</h3>
+          <p>
+            Sign Up to our monthly newsletter to recieve all the latest Jazz news
+            <br>
+            <span>Recieve a special edition on your birthday</span>
+          </p>
+          <br>
+          <label for="firstName">First Name:</label>
+          <input type="text" name="firstName" id="firstName" tabindex="1">
+          <label for="surname">Surname:</label>
+          <input type="text" name="surname" id="surname" tabindex="2">
+          <label for="myEmail">E-mail:</label>
+          <input type="email" name="myEmail" id="myEmail" tabindex="3">
+          <label for="myDate">Birthday:</label>
+          <input type="date" name="myDate" id="myDate" tabindex="4">
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </main>
+
+    <!--Footer-->
+    <footer>
+      &copy; Jazz Fanzz | 2024 Contact Us: <a href="mailto:info@jazzfanzz.com">info@jazzfanzz.com</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+
